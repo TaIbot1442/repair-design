@@ -1,12 +1,14 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-const cleanCSS = require('gulp-clean-css');
+const cssmin = require('gulp-cssmin');
+const rename = require('gulp-rename');
  
-gulp.task('minify-css', () => {
-  return gulp.src('styles/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist'));
+gulp.task('gulp-cssmin', function () {
+    gulp.src('./*/src/**/*.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./css'));
 });
 
 function style() {
