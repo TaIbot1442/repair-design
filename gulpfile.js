@@ -5,27 +5,27 @@ const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
  
 gulp.task('gulp-cssmin', function () {
-    gulp.src('./*/src/**/*.css')
+    return gulp.src('./src/**/*.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./src/'));
 });
 
 function style() {
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('./src/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream())
 }
 
 function watch() {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: 'src'
         }
     })
-    gulp.watch('./scss/**/*.scss', style);
-    gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./src/scss/**/*.scss', style);
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
 }
 
 
