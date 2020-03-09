@@ -405,6 +405,7 @@ body {
   align-items: center; }
 
 .logo {
+  text-decoration: none;
   color: #e3b873;
   font-size: 1rem;
   text-transform: uppercase;
@@ -563,11 +564,12 @@ body {
     .hero .container {
       margin: 0 auto; }
     .hero__content {
-      max-width: 100%; }
+      max-width: 350px; }
     .hero__text {
       line-height: 150%;
       font-size: 1.39rem;
       margin-top: 8px;
+      padding-top: 0;
       margin-bottom: 2.7rem; }
     .hero__button {
       display: block;
