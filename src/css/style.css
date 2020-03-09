@@ -319,7 +319,8 @@ template {
   display: none; }
 
 .button {
-  padding: 11px 24px;
+  font-family: 'Futura Demi';
+  padding: 11px 20px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -331,7 +332,8 @@ template {
     color: #fff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: all 0.5s;
-    border: 1px solid transparent; }
+    border: 1px solid transparent;
+    margin-right: -1.7rem; }
     .button_primary:hover {
       box-shadow: none;
       border: 1px solid #fff;
@@ -360,6 +362,18 @@ html {
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
+
+.menu__logo {
+  font-family: 'Futura Demi'; }
+
+.menu__contacts {
+  font-family: 'Futura Demi'; }
+
+.hero__instagram {
+  font-family: 'Futura Demi'; }
+
+.hero__scroll-down {
+  font-family: 'Yeseva One'; }
 
 .section-title {
   text-align: center;
@@ -392,14 +406,15 @@ body {
 
 .logo {
   color: #e3b873;
-  font-size: 1.075rem;
-  text-transform: uppercase; }
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-left: -1.8rem; }
 
 .nav__item {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.5rem;
+  margin-right: 2.55rem;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #e3b873; }
@@ -408,7 +423,7 @@ body {
   color: #e3b873; }
 
 .contacts__phone {
-  margin-right: 45px; }
+  margin-right: 2.95rem; }
 
 .hero {
   position: relative;
@@ -461,7 +476,8 @@ body {
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-size: 0.85rem; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -469,7 +485,7 @@ body {
       height: 30px;
       border: 2px solid #e3b873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 17px; }
 
 .instagram {
   background-color: #131313;
@@ -484,13 +500,14 @@ body {
     color: #e3b873;
     transform: rotate(90deg);
     line-height: 0.8;
-    font-size: 1.1rem; }
+    font-size: 1rem;
+    margin-top: -5.1rem; }
     .instagram__link::after {
       content: '';
       width: 50px;
       height: 1px;
       background-color: #e3b873;
-      margin-left: 8px; }
+      margin-left: 9px; }
 
 .title {
   margin: 0;
