@@ -334,19 +334,11 @@ template {
     transition: all 0.5s;
     border: 1px solid transparent;
     margin-right: -1.7rem; }
-    .button_primary:hover {
-      box-shadow: none;
-      border: 1px solid #fff;
-      box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
-      background-color: rgba(255, 255, 255, 0.3); }
   .button_outline {
     transition: all 0.5s;
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
-    .button_outline:hover {
-      box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
-      background-color: rgba(255, 255, 255, 0.3); }
 
 .container {
   width: 85%;
@@ -503,14 +495,17 @@ body {
     color: #e3b873;
     transform: rotate(90deg);
     line-height: 0.8;
-    font-size: 1rem;
-    margin-top: -5.1rem; }
+    font-size: 1rem; }
     .instagram__link::after {
       content: '';
       width: 50px;
       height: 1px;
       background-color: #e3b873;
       margin-left: 9px; }
+    .instagram__link:hover {
+      color: #fff; }
+    .instagram__link:hover:after {
+      background-color: #fff; }
 
 .title {
   margin: 0;
@@ -528,7 +523,24 @@ body {
   .nav__item {
     margin-right: 1rem; } }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
+  .logo:hover {
+    color: #fff; }
+  .phone:hover {
+    color: #fff; }
+  .button:hover {
+    box-shadow: none;
+    border: 1px solid #fff;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3); }
+  .button_outline:hover {
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3); }
+  .hero__scroll-down:hover {
+    color: #e3b873;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); } }
+
+@media screen and (max-width: 991px) {
   .nav {
     display: none; }
   .hero__instagram {
@@ -540,11 +552,8 @@ body {
   .header {
     padding: 22px 0; }
   .container {
-    width: 100%;
-    max-width: 1256px;
-    margin: 0 auto;
-    padding-left: 18px;
-    padding-right: 18px; }
+    width: 90%;
+    max-width: 1256px; }
   .menu__logo {
     margin: 0; }
   .contacts__phone {
@@ -566,11 +575,12 @@ body {
     .hero__content {
       max-width: 350px; }
     .hero__text {
-      line-height: 150%;
-      font-size: 1.39rem;
-      margin-top: 8px;
+      line-height: 140%;
+      font-size: 1.5rem;
+      margin-top: 0.75rem;
       padding-top: 0;
-      margin-bottom: 2.7rem; }
+      margin-bottom: 2.5rem;
+      max-width: 26.6rem; }
     .hero__button {
       display: block;
       min-width: 100%;
