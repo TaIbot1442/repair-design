@@ -35,7 +35,16 @@
             display: none
         &__content
             margin-left: 0
-
+@media screen and ( max-width: 760px )
+    .row
+        flex-direction: column
+        align-items: center
+    .types
+        &__card
+            margin-bottom: 5rem
+    .card
+        &__text
+            margin-left: 0
 @media screen and ( max-width: 570px ) 
     .header
         padding: 22px 0
@@ -79,6 +88,23 @@
             display: none
     .button
         font-size: 1.1rem
+    .section-title
+        &__heading
+            font-size: 1.834rem
+    .col
+        margin-bottom: -7px
+    .card
+        &__text
+            margin-top: -11.3rem
+            padding: 1.79rem 2.65rem
+        &__title
+            font-size: 1.25rem
+        &__list
+            font-size: 1.084rem
+            line-height: 1.89rem
+        &__pricetag
+            padding: 1.01rem 2.7rem
+            bottom: -0.79rem
 @media screen and ( max-height: 520px ) 
     .hero
         &__scroll-down
