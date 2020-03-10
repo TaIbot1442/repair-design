@@ -643,10 +643,12 @@ img {
     font-size: 1.1rem; }
   .section-title__heading {
     font-size: 1.834rem; }
-  .col {
-    margin-bottom: -7px; }
+  .types__section-title {
+    margin-bottom: 3.4rem; }
+  .types__card {
+    margin-bottom: 5.7rem; }
   .card__text {
-    margin-top: -11.3rem;
+    margin-top: -12.7rem;
     padding: 1.79rem 2.65rem; }
   .card__title {
     font-size: 1.25rem; }
