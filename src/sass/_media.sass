@@ -118,6 +118,8 @@
             line-height: 140%
             margin-bottom: 2.95rem
     .design
+        background-color: $dark
+        color: $light
         &__col
             margin-bottom: 5.8rem
         &__pricetag
@@ -132,7 +134,7 @@
                 &:nth-child(7):not(:last-child)::after
                     content: '...'
             &__item:nth-child(-n + 7)
-                display: block
+                display: list-item
 
 @media screen and ( max-height: 520px ) 
     .hero
