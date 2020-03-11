@@ -99,7 +99,7 @@
     .card
         &__text
             margin-top: -12.7rem
-            padding: 1.79rem 2.65rem
+            padding: 2rem 2.65rem
         &__title
             font-size: 1.25rem
         &__list
@@ -108,6 +108,29 @@
         &__pricetag
             padding: 1.01rem 2.7rem
             bottom: -0.79rem
+    .description
+        &__text
+            max-width: 90%
+            font-size: 1.25rem
+            line-height: 140%
+            margin-bottom: 2.95rem
+    .design
+        &__col
+            margin-bottom: 5.8rem
+        &__pricetag
+            padding: 0.7rem 4.1rem 1.01rem 3.9rem
+            font-size: 1.25rem
+        &__sup
+            top: 0
+            font-size: 1.25rem
+        .card
+            &__item
+                display: none
+                &:nth-child(7):not(:last-child)::after
+                    content: '...'
+            &__item:nth-child(-n + 7)
+                display: block
+
 @media screen and ( max-height: 520px ) 
     .hero
         &__scroll-down
