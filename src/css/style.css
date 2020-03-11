@@ -457,7 +457,7 @@ img {
     max-width: 80px;
     height: 100%; }
   .hero__scroll-down {
-    font-family: 'Yeseva One', cursive;
+    font-family: 'Yeseva One';
     position: absolute;
     display: flex;
     align-items: center;
@@ -672,7 +672,9 @@ img {
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .design__col {
+    margin-bottom: 5.8rem; } }
 
 @media screen and (max-width: 570px) {
   .header {
