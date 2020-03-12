@@ -332,7 +332,7 @@ template {
     color: #fff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: all 0.5s;
-    border: 1px solid transparent;
+    border: 1px solid #e3b873;
     margin-right: -0.4rem; }
   .button_outline {
     transition: all 0.5s;
@@ -353,7 +353,7 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: #fff;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0 0.65rem; }
   .input::-webkit-input-placeholder {
     color: #fff; }
   .input::-moz-placeholder {
@@ -367,7 +367,8 @@ template {
 
 .policy__checkbox {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  display: none; }
   .policy__checkbox:checked + .policy__label::before {
     content: '';
     background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
@@ -721,16 +722,16 @@ img {
     visibility: visible; }
   .modal__dialog {
     position: relative;
-    max-width: 36.36rem;
+    max-width: 36.1rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
-    padding: 2.357rem 3.5rem 1.928rem;
+    padding: 2.157rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
     position: absolute;
     right: 0;
     top: 0;
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     background: transparent url("../img/close.svg") no-repeat center;
     border: none;
     margin: 12px;
@@ -742,25 +743,29 @@ img {
     line-height: 1.86rem;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.428rem; }
+    margin-bottom: 2.03rem; }
   .modal__form {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    margin-bottom: 3.428rem; }
+    margin-bottom: 3.3rem;
+    margin-top: -5px; }
     .modal__input:last-of-type {
       margin-bottom: 1rem;
       font-weight: 500;
       font-size: 18px;
       line-height: 25px; }
+    .modal__input[type=tel] {
+      margin-bottom: 3.2rem; }
+    .modal__input[type=email] {
+      margin-top: -6px;
+      margin-bottom: 0.8rem; }
   .modal__policy {
-    margin-bottom: 2.7rem;
-    margin-left: 0.2rem; }
+    margin-bottom: 2.65rem; }
   .modal__button {
     align-self: flex-end;
-    padding: 1.3rem 3.2rem;
-    margin-bottom: 2rem;
-    margin-right: 0.1rem; }
+    padding: 1.25rem 3.2rem;
+    margin-right: 0rem; }
 
 @media screen and (max-width: 1200px) {
   html {

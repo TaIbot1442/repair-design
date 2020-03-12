@@ -12,7 +12,7 @@
     color: $light
     box-shadow: 0px 5px 15px rgba($primary, 0.2)
     transition: all 0.5s
-    border: 1px solid transparent
+    border: 1px solid $primary
     margin-right: -0.4rem;
   &_outline
     transition: all 0.5s
@@ -31,13 +31,14 @@
   border-bottom: 1px solid rgba(54,54,54, 0.3)
   font-size: 1.285rem
   color: $light
-  padding: 0.5rem 0
+  padding: 0.5rem 0 0.65rem
   &::placeholder
     color: $light
 .policy
   &__checkbox
     opacity: 0
     visibility: hidden
+    display: none
     &:checked +
       .policy__label
         &::before
