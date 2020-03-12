@@ -25,8 +25,7 @@
         &__scroll-down
             &:hover
                 color: $primary
-                box-shadow: 0px 0px 10px rgba($light, 0.3)
-    
+                box-shadow: 0px 0px 10px rgba($light, 0.3)    
 @media screen and ( max-width: 991px ) 
     .nav
         display: none
@@ -35,6 +34,21 @@
             display: none
         &__content
             margin-left: 0
+    .row
+        flex-direction: column
+        align-items: center
+    .types
+        &__card
+            margin-bottom: 5rem
+        &__text
+            margin-left: 0
+    .design
+        background-color: $dark
+        color: $light
+        &__col
+            margin-bottom: 5.8rem
+        &__text
+            margin-left: 0
 @media screen and ( max-width: 760px )
     .row
         flex-direction: column
@@ -42,12 +56,15 @@
     .types
         &__card
             margin-bottom: 5rem
-    .card
         &__text
             margin-left: 0
     .design
+        background-color: $dark
+        color: $light
         &__col
             margin-bottom: 5.8rem
+        &__text
+            margin-left: 0
 @media screen and ( max-width: 570px ) 
     .header
         padding: 22px 0
@@ -99,7 +116,7 @@
             margin-bottom: 3.4rem
         &__card
             margin-bottom: 5.7rem
-    .card
+    .types
         &__text
             margin-top: -12.7rem
             padding: 2rem 2.65rem
@@ -122,6 +139,14 @@
         color: $light
         &__col
             margin-bottom: 5.8rem
+        &__text
+            margin-top: -12.7rem
+            padding: 2rem 2.65rem
+        &__title
+            font-size: 1.25rem
+        &__list
+            font-size: 1.084rem
+            line-height: 1.89rem        
         &__pricetag
             padding: 0.7rem 4.1rem 1.01rem 3.9rem
             font-size: 1.25rem
