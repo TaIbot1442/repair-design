@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function(event) { 
     const modal = document.querySelector('.modal');
     const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -10,17 +11,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
         element.addEventListener('click', switchModal);    
     });
 
-    // modalContent.addEventListener('click', (e) =>{
-    //     if(e.target.className != '.modal__dialog'){
-    //         alert("target")
-    //     }
-    // });
     
     closeBtn.addEventListener('click', switchModal);
     
-    document.addEventListener('keypress', (e) =>{
-        if(e.code === "KeyR"){
-            modal.classList.remove('modal_visible');
-        }
+   
+  });
+  */
+
+  $(document).ready(function () {
+    var modal = $('.modal'),
+        modalBtn = $('[data-toggle=modal]'),
+        closeBtn = $('.modal__close');
+
+    modalBtn.on('click', function () {
+        modal.toggleClass('modal_visible');
     });
+    closeBtn.on('click',function () {
+        modal.toggleClass('modal_visible');
+    });  
   });
