@@ -52,6 +52,45 @@
             margin-bottom: 5.8rem
         &__text
             margin-left: 0
+    .projects
+        background: $dark
+        padding: 2.76rem 0
+        &__left, &__right
+            width: 100%
+            max-width: 340px
+        &__right
+            margin-top: 2.728rem
+        &__param-slider
+            margin-top: 3rem
+            margin-left: 0
+            max-width: 320px
+            padding-bottom: 2.27rem
+    .section-title
+        &__heading
+            &_primary
+            margin-left: 0
+        &__word
+            letter-spacing: -0.217rem
+        &__text
+            margin-left: 0
+            font-size: 1.167rem
+            line-height: 158.48%
+            margin-top: 2rem
+            max-width: 290px
+    .swiper
+        &-slide
+            &__heading
+                font-size: 1.167rem
+                line-height: 158.48%
+                margin-bottom: 0.84rem
+            &__value
+                font-size: 1.167rem
+                line-height: 135.84%
+            &__text
+                margin-bottom: 2.22rem
+            &__img
+                width: 100%
+                max-height: 201.84px
 @media screen and ( max-width: 760px )
     .row
         flex-direction: column
@@ -181,7 +220,14 @@
                     content: '...'
             &__item:nth-child(-n + 7)
                 display: list-item
-
+    .projects
+        padding: 2.76rem 0
+        &__left, &__right
+            width: 100%
+            max-width: 340px
+        &__right
+            margin-top: 2.728rem
+    
 @media screen and ( max-height: 520px ) 
     .hero
         &__scroll-down

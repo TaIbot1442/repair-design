@@ -1,0 +1,67 @@
+.swiper
+    &-slide
+        display: flex
+        flex-wrap: wrap 
+        height: auto
+        &__value
+            display: flex
+            font-weight: 400
+            font-size: 1.072rem
+            line-height: 1.429rem
+            max-width: 8.5rem
+        &__text
+            flex-basis: 50%
+            margin-bottom: 2.72rem            
+        &__heading
+            font-family: 'Yeseva One', cursive
+            color: $primary
+            font-size: 1.286rem
+            line-height: 1.786rem          
+            font-weight: 400
+            text-transform: uppercase;
+            margin-bottom: 0.24rem
+            margin-top: 0        
+    &-pagination        
+        &-bullet
+            background-color: rgba($light, 0.3)
+            width: 10px
+            height: 10px
+            margin: 0 10px
+            &-active
+                background-color: $light
+    &-button
+        &-prev, &-next
+            bottom: 0
+            top: auto        
+            background-size: 42px
+            width: 40px
+            height: 14px
+            &::after
+                display: none
+        &-prev
+            left: 0.1rem
+            background: url('../img/arrow-prev.svg') no-repeat center
+        &-next
+            background: url('../img/arrow-next.svg') no-repeat center
+.swiper-container-horizontal>.swiper-pagination-bullets
+    width: auto
+    bottom: -2px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+    margin: 0 9px
+
+.projects
+    background: url(../img/bg_city.jpg) no-repeat center bottom
+    margin-top: -3.46rem
+    position: relative
+    z-index: 1
+    padding: 12.46rem 0
+    &__left
+        width: 45%
+    &__right
+        width: 55%
+    &__param-slider
+        margin-left: -0.4rem
+        max-width: 380px
+        margin-top: 3.5rem
+        padding-bottom: 4.57rem
+            
