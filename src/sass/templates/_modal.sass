@@ -63,3 +63,27 @@
         align-self: flex-end
         padding: 1.25rem 3.2rem
         margin-right: 0rem
+.to-top
+    position: fixed
+    bottom: 50px
+    right: 25px
+    width: 50px
+    height: 50px
+    border: 2px solid $primary
+    color: $primary
+    z-index: 10
+    text-align: center
+    border-radius: 100%
+    line-height: 50px
+    opacity: 0
+    visibility: hidden
+    transform: translate(0,50px)
+    transition: all 0.3s
+    text-decoration: none
+    display: flex
+    align-items: center
+    justify-content: center
+    &.active
+        opacity: 1
+        visibility: visible
+        transform: translate(0,0px)
