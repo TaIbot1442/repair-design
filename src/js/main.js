@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", (event) =>{
   //   }
   // };
   
+  new WOW().init();
+
 });
 
 
@@ -98,6 +100,15 @@ document.addEventListener("DOMContentLoaded", (event) =>{
 
   });
 
+  var scrollDown = $('.hero__scroll-down');
+  if($(window).scrollTop()>$(window).height()){
+    scrollDown.removeClass('active');
+  }else{
+    scrollDown.addClass('active');
+  };
+
+   
+
   $(window).scroll(function () {
     var topBtn = $('.to-top'),
         windowHeight = $(window).height();
@@ -106,5 +117,11 @@ document.addEventListener("DOMContentLoaded", (event) =>{
       topBtn.addClass('active');
     }else{
       topBtn.removeClass('active');
+    };    
+    var scrollDown = $('.hero__scroll-down');
+    if($(window).scrollTop()>$(window).height()){
+      scrollDown.removeClass('active');
+    }else{
+      scrollDown.addClass('active');
     };
   })
