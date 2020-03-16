@@ -672,6 +672,8 @@ img {
   z-index: 1;
   padding: 12.46rem 0;
   background-size: cover; }
+  .projects__main-slider img {
+    width: 100%; }
   .projects__left {
     width: 45%; }
   .projects__right {
