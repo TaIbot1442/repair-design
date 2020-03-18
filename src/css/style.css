@@ -376,8 +376,8 @@ template {
 .policy__label {
   display: flex;
   align-items: center;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1.143rem;
+  line-height: 1.572rem;
   font-weight: 400; }
   .policy__label::before {
     content: '';
@@ -387,6 +387,14 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label_center {
+    justify-content: center; }
+
+label.invalid {
+  color: #FF6347; }
+
+input.invalid {
+  border-bottom: 1px solid #FF6347; }
 
 .container {
   width: 85%;
@@ -417,6 +425,7 @@ img {
 .section {
   padding: 5.6rem 0; }
   .section_dark {
+    background-color: #131313;
     color: #fff; }
   .section-title {
     text-align: center; }
@@ -568,7 +577,7 @@ img {
     max-width: 80px;
     height: 100%; }
   .hero__scroll-down {
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One', cursive;
     position: absolute;
     z-index: 3;
     display: flex;
@@ -733,7 +742,7 @@ img {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.8); }
+      background-color: #181818; }
   .control__text {
     max-width: 40.786rem;
     margin: auto;
@@ -829,66 +838,62 @@ img {
   margin-right: 0.4rem;
   margin-bottom: 1.2rem; }
 
-.design__col {
-  flex-basis: 32%;
-  margin-right: -9px; }
-
-.design__section-title {
-  margin-bottom: 1.16rem; }
-
-.design__img {
-  position: relative;
-  max-width: 392px;
-  max-height: 422px;
-  width: 100%;
-  height: 100%;
-  margin-left: -0.4rem; }
-  .design__img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.design {
+  padding-bottom: 30rem; }
+  .design__col {
+    flex-basis: 32%;
+    margin-right: -9px; }
+  .design__section-title {
+    margin-bottom: 1.16rem; }
+  .design__img {
+    position: relative;
+    max-width: 392px;
+    max-height: 422px;
     width: 100%;
     height: 100%;
-    background-color: rgba(19, 19, 19, 0.3); }
-
-.design__text {
-  position: relative;
-  max-width: 23.6rem;
-  margin: 0 auto;
-  margin-top: -9.3rem;
-  padding: 1.79rem 2.14rem;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-
-.design__title {
-  font-family: 'Yeseva One', cursive;
-  font-size: 1.29rem;
-  line-height: 1.786rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 400; }
-
-.design__list {
-  margin: 0;
-  padding: 0 0 0 0.9rem;
-  font-size: 1.072rem;
-  line-height: 1.79rem;
-  color: #959595;
-  margin-bottom: 2.7rem; }
-
-.design__pricetag {
-  position: absolute;
-  left: 0;
-  bottom: -1.59rem;
-  font-size: 1.29rem;
-  line-height: 1.786rem;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  background-color: #e3b873;
-  color: #fff;
-  padding: 1.1rem 5.7rem 1rem 2rem;
-  font-weight: 400; }
+    margin-left: -0.4rem; }
+    .design__img::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(19, 19, 19, 0.3); }
+  .design__text {
+    position: relative;
+    max-width: 23.6rem;
+    margin: 0 auto;
+    margin-top: -9.3rem;
+    padding: 1.79rem 2.14rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .design__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.29rem;
+    line-height: 1.786rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 400; }
+  .design__list {
+    margin: 0;
+    padding: 0 0 0 0.9rem;
+    font-size: 1.072rem;
+    line-height: 1.79rem;
+    color: #959595;
+    margin-bottom: 2.7rem; }
+  .design__pricetag {
+    position: absolute;
+    left: 0;
+    bottom: -1.59rem;
+    font-size: 1.29rem;
+    line-height: 1.786rem;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    background-color: #e3b873;
+    color: #fff;
+    padding: 1.1rem 5.7rem 1rem 2rem;
+    font-weight: 400; }
 
 .description__text {
   display: flex;
@@ -898,6 +903,51 @@ img {
   font-size: 1.429rem;
   line-height: 135%;
   margin-bottom: 3.4rem; }
+
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -20rem;
+    padding: 2.5rem;
+    margin-bottom: 3.714rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.429rem;
+    text-align: center;
+    margin-bottom: 3.215rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group_full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.286rem 4.786rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
 
 .modal {
   opacity: 0;
@@ -921,7 +971,7 @@ img {
   .modal__dialog {
     position: relative;
     max-width: 36.1rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center/cover;
     padding: 2.157rem 3.5rem 1.928rem;
     color: #fff; }
   .modal__close {
@@ -945,19 +995,20 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal .form__input {
-    margin-bottom: 3.3rem;
+  .modal__input {
     margin-top: -5px; }
-    .modal .form__input:last-of-type {
-      margin-bottom: 1rem;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 25px; }
-    .modal .form__input[type=tel] {
-      margin-bottom: 3.2rem; }
-    .modal .form__input[type=email] {
-      margin-top: -6px;
-      margin-bottom: 0.8rem; }
+    .modal__input:not(:last-child) {
+      margin-bottom: 1rem; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.3rem; }
+      .modal__input-group:nth-child(2) {
+        margin-bottom: 3.2rem; }
+      .modal__input-group:nth-child(3) {
+        margin-top: -6px;
+        margin-bottom: 0.8rem;
+        line-height: 25px; }
   .modal__policy {
     margin-bottom: 2.65rem; }
   .modal__button {

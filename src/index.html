@@ -184,12 +184,12 @@
           </p>
           <form action="#" class="form control__form wow zoomIn">
             <div class="control__input-group">
-              <label for="control-name" class="label form__label control__label">Имя</label>
-            <input type="text" class="input form__input control__input" id="control-name" placeholder="Как вас зовут:"> 
+              <label for="user-name" class="label form__label control__label">Имя</label>
+            <input type="text" name="userName" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:"> 
             </div>
             <div class="control__input-group">
-              <label for="control-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" class="input form__input control__input" id="control-phone" placeholder="Ваш номер телефона:"> 
+              <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:"> 
             </div>           
             <button class="button button_primary control__button">Отправить</button>
             <div class="policy control__policy">
@@ -324,8 +324,8 @@
             <!-- /.section-title__image -->
           </div>
           <!-- /.section-title -->
-          <span class="design description__text wow zoomIn">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</span>
-          <!-- /.description design__text -->
+          <span class="description__text wow zoomIn">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</span>
+          <!-- /.description__text -->
           <div class="row">
             <div class="col design__col">
               <div class="card design__card">
@@ -433,7 +433,60 @@
       </section>
       <!-- /.section control -->
     </main>
-
+      <footer class="footer section_dark">
+        <div class="container">
+          <div class="footer__wrap">
+            <h3 class="footer__title">Остались вопросы?</h3>
+            <form action="#" class="form footer__form">
+              <div class="input-group footer__input-group">
+                <label for="user-name" class="label form__label label_light">Имя</label>
+              <input type="text" name="userName" class="input form__input footer__input input_light" id="user-name" placeholder="Как вас зовут:">
+              </div>
+              <!-- /.input-group footer__input-group --> 
+              <div class="input-group footer__input-group">
+                <label for="user-phone" class="label form__label label_light">Телефон</label>
+              <input type="tel" name="userPhone" class="input form__input footer__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
+              </div>
+              <!-- /.input-group footer__input-group -->
+              <div class="input-group footer__input-group footer__input-group_full-width">
+                <label for="user-question" class="label form__label label_light">Вопрос</label>
+              <input type="text" name="userName" class="input form__input footer__input input_light" id="user-question" placeholder="Я хочу спросить:">
+              </div>
+              <!-- /.input-group footer__input-group -->
+              <div class="policy footer__policy">
+                <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox name=""" class="policy__checkbox" checked>
+                <label for="footer__policy-checkbox" class="policy__label policy__label_center">Я соглашаюсь с обработкой данных</label>
+              </div>
+              <!-- /.policy -->
+              <button class="button button_primary footer__button">Отправить</button>
+            </form>
+            <!-- /.form footer -->
+          </div>          
+        </div>
+        <div class="footer__menu">
+          <div class="container">
+            <div class="menu">
+              <a href="#" class="logo menu__logo">Repair Design Project</a>
+              <nav class="nav menu__nav">
+                <a href="#" class="nav__item">Главная</a>
+                <a href="#" class="nav__item">Проекты</a>
+                <a href="#" class="nav__item">Замер</a>
+                <a href="#" class="nav__item">Команда</a>
+                <a href="#" class="nav__item">Отзывы</a>
+                <a href="#" class="nav__item">Контакты</a>
+              </nav>
+              <div class="contacts menu__contacts">
+                <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+                <button class="button contacts__button button_primary" data-toggle="modal">Заказать звонок</button>
+              </div>
+            </div>
+            <!-- /.menu -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.footer__menu -->
+      </footer>
+      <!-- /.footer section section_dark -->
     <a href="" class="to-top">
       <svg aria-hidden="true" focusable="false" width="15" data-prefix="fal" data-icon="chevron-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-chevron-up fa-w-14 fa-2x"><path fill="currentColor" d="M4.465 366.475l7.07 7.071c4.686 4.686 12.284 4.686 16.971 0L224 178.053l195.494 195.493c4.686 4.686 12.284 4.686 16.971 0l7.07-7.071c4.686-4.686 4.686-12.284 0-16.97l-211.05-211.051c-4.686-4.686-12.284-4.686-16.971 0L4.465 349.505c-4.687 4.686-4.687 12.284 0 16.97z" class=""></path></svg>
     </a>
@@ -444,12 +497,18 @@
         <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
         <!-- /.modal__title -->
         <form action="#" class="form modal__form">
-          <label for="user-name" class="label form__label label_light">Имя</label>
-          <input type="text" class="input form__input input_light" id="user-name" placeholder="Как вас зовут:"> 
-          <label for="user-phone" class="label form__label label_light">Телефон</label>
-          <input type="tel" class="input form__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
-          <label for="user-email" class="label form__label label_light">Email</label>
-          <input type="email" class="input form__input input_light" id="user-email" placeholder="Ваш email:">
+          <div class="input-group modal__input-group">
+            <label for="user-name" class="label form__label label_light">Имя</label>
+            <input type="text" name="userName" class="input form__input modal__input input_light" id="user-name" placeholder="Как вас зовут:">
+          </div>
+          <div class="input-group modal__input-group">
+            <label for="user-phone" class="label form__label label_light">Телефон</label>
+            <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="user-phone" placeholder="Ваш номер телефона:">
+          </div>
+          <div class="input-group modal__input-group">
+            <label for="user-email" class="label form__label label_light">Email</label>
+            <input type="email" name="userEmail" class="input form__input modal__input input_light" id="user-email" placeholder="Ваш email:">
+          </div>          
           <div class="policy modal__policy">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
             <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
@@ -465,6 +524,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
