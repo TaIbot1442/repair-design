@@ -32,33 +32,37 @@ document.addEventListener("DOMContentLoaded", (event) =>{
   new WOW().init();
 
   // Валидация формы
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    rules: {
-      // строчное правило
-      userName: {
-        required: true,
-        minlength: 2
-      },
-      userPhone: "required",
-      // правило-обьект (блок)
-      userEmail: {
-        required: true,
-        email: true
+  $('form').each(function(){
+    $(this).validate({
+      errorClass: "invalid",
+      rules: {
+        // строчное правило
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: "required",
+        // правило-обьект (блок)
+        userEmail: {
+          required: true,
+          email: true
+        }
+      }, // сообщение
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя не короче двух букв",
+          maxlength: "Имя не больше 15 букв"
+        },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+          required: "Обязательно укажите email",
+          email: "Введите в формате: name@domain.com"
+        }
       }
-    }, // сообщение
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче двух букв"
-      },
-      userPhone: "Телефон обязателен",
-      userEmail: {
-        required: "Обязательно укажите email",
-        email: "Введите в формате: name@domain.com"
-      }
-    }
-  });
+    });
+  })
 
   // маска для телефона
 

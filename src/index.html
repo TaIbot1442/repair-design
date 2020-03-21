@@ -176,7 +176,7 @@
           </div>
           <!-- /.section-title -->
           <div class="control__video video wow zoomIn">
-            <img src="img/play-icon.svg" alt="play-icon" class="video__play">
+            <img src="/img/play-icon.svg" alt="play-icon" class="video__play">
           </div>
           <!-- /.control__video video -->
           <p class="control__text wow zoomIn">
@@ -450,19 +450,25 @@
               <!-- /.input-group footer__input-group -->
               <div class="input-group footer__input-group footer__input-group_full-width">
                 <label for="user-question" class="label form__label label_light">Вопрос</label>
-              <input type="text" name="userName" class="input form__input footer__input input_light" id="user-question" placeholder="Я хочу спросить:">
+              <input type="text" name="userQuestion" class="input form__input footer__input input_light" id="user-question" placeholder="Я хочу спросить:">
               </div>
               <!-- /.input-group footer__input-group -->
               <div class="policy footer__policy">
-                <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox name=""" class="policy__checkbox" checked>
+                <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox" name="footer__policy-checkbox" class="policy__checkbox" checked>
                 <label for="footer__policy-checkbox" class="policy__label policy__label_center">Я соглашаюсь с обработкой данных</label>
               </div>
               <!-- /.policy -->
               <button class="button button_primary footer__button">Отправить</button>
             </form>
             <!-- /.form footer -->
-          </div>          
+          </div>
+           <!-- /.footer__wrap -->
+           <div class="map footer__map" id="map">
+            <iframe src="https://snazzymaps.com/embed/227314" width="100%" height="600px" style="border:none;"></iframe>
+           </div>
+           <!-- /.map footer__map -->
         </div>
+        <!-- /.container -->
         <div class="footer__menu">
           <div class="container">
             <div class="menu">
@@ -526,6 +532,9 @@
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBUSd-HJI-3-jjvjTSRsNY0y9dxLzCXDg&callback=initMap">
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
