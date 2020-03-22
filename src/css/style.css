@@ -388,7 +388,9 @@ template {
     cursor: pointer;
     margin-right: 0.64rem; }
   .policy__label_center {
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 1rem;
+    margin-right: 1.5rem; }
 
 label.invalid {
   color: #FF6347; }
@@ -584,7 +586,7 @@ img {
     align-items: center;
     justify-content: center;
     left: 0;
-    bottom: 0;
+    bottom: 0.3rem;
     min-width: 17.6rem;
     min-height: 6.92rem;
     background-color: #131313;
@@ -705,7 +707,7 @@ img {
 
 .projects {
   background: url(../img/bg_city.jpg) no-repeat center bottom;
-  margin-top: -3.46rem;
+  margin-top: -3.76rem;
   position: relative;
   padding: 12.46rem 0;
   padding-bottom: 30rem;
@@ -727,7 +729,7 @@ img {
   padding-bottom: 3.5rem; }
   .control__section-title {
     margin-bottom: 2.215rem;
-    margin-top: -30rem; }
+    margin-top: -30.8rem; }
   .control__video {
     position: relative;
     display: flex;
@@ -847,7 +849,7 @@ img {
   margin-bottom: 1.2rem; }
 
 .design {
-  padding-bottom: 30rem; }
+  padding-bottom: 29rem; }
   .design__col {
     flex-basis: 32%;
     margin-right: -9px; }
@@ -919,9 +921,11 @@ img {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-top: -20rem;
+    margin-top: -18.9rem;
     padding: 2.5rem;
-    margin-bottom: 3.714rem; }
+    margin-bottom: 3.414rem; }
+    .footer__wrap-mod {
+      padding-left: 20px; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -938,7 +942,7 @@ img {
     max-width: 37.142rem;
     margin: auto; }
   .footer__input {
-    padding-top: 0.3rem; }
+    padding-top: 0; }
     .footer__input-group {
       display: flex;
       flex-direction: column;
@@ -949,13 +953,18 @@ img {
         margin-bottom: 2rem; }
   .footer__policy {
     flex-basis: 100%;
-    margin-bottom: 3.6rem; }
+    margin-bottom: 3.5rem; }
   .footer__button {
     margin: auto;
-    padding: 1.286rem 4.786rem; }
+    padding: 0.79rem 4.286rem;
+    font-family: 'Futura Demi';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    text-transform: uppercase; }
   .footer__menu {
     background-color: #131313;
-    padding: 4.285rem 0; }
+    padding: 4.085rem 0; }
   .footer__address-wrap {
     max-width: 38rem;
     margin: auto; }
@@ -969,20 +978,28 @@ img {
     text-align: center;
     text-transform: uppercase;
     color: #e3b873;
-    margin-bottom: 26px; }
-  .footer__link {
-    text-align: center;
-    margin-bottom: 43px; }
-  .footer__link-img {
-    background: #e3b873;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%; }
+    margin-bottom: 23px; }
   .footer__number {
     text-decoration: none;
     color: #e3b873; }
     .footer__number:hover {
       color: #fff; }
+  .footer__links {
+    margin-bottom: 43px;
+    text-align: center; }
+  .footer__link {
+    background: #e3b873;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 2px solid #e3b873;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0 6px; }
+    .footer__link:hover {
+      background: none; }
   .footer__map {
     display: flex;
     margin: auto;
