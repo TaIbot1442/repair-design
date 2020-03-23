@@ -27,57 +27,8 @@ document.addEventListener("DOMContentLoaded", (event) =>{
   //     document.removeEventListener('keyup', pressESC);
   //     modal.classList.remove('modal_visible');
   //   }
-  // };
-  
-  new WOW().init();
-
-  // Валидация формы
-  $('form').each(function(){
-    $(this).validate({
-      errorClass: "invalid",
-      rules: {
-        // строчное правило
-        userName: {
-          required: true,
-          minlength: 2,
-          maxlength: 15
-        },
-        userPhone: {
-          required: true,
-          minlength: 17
-        },
-        // правило-обьект (блок)
-        userEmail: {
-          required: true,
-          email: true
-        },
-        policy: {
-          required: true
-        }
-      }, // сообщение
-      messages: {
-        userName: {
-          required: "Имя обязательно",
-          minlength: "Имя не короче двух букв",
-          maxlength: "Имя не больше 15 букв"
-        },
-        userPhone: {
-          required: "Телефон обязателен",
-          minlength: "Слишком короткий номер",
-        },
-        userEmail: {
-          required: "Обязательно укажите email",
-          email: "Введите в формате: name@domain.com"
-        },
-        policy: {
-          required: "Поле обязательно"
-        }
-      }
-    });
-  })
-
-  // маска для телефона
-  $('[type=tel]').mask('+7(000) 000-00-00');
+  // };  
+  new WOW().init(); 
 
   // yandex map
   ymaps.ready(function () {
@@ -120,8 +71,7 @@ document.addEventListener("DOMContentLoaded", (event) =>{
 
 
 
-  $(document).ready(function () {
-    
+  $(document).ready(function () {    
     var modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
@@ -183,6 +133,69 @@ document.addEventListener("DOMContentLoaded", (event) =>{
       $('body,html').animate({scrollTop: 0}, 1000)
     });
 
+     // Валидация формы
+    $('form').each(function(){
+      $(this).validate({
+        errorClass: "invalid",
+        rules: {
+          // строчное правило
+          userName: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          userPhone: {
+            required: true,
+            minlength: 17
+          },
+          // правило-обьект (блок)
+          userEmail: {
+            required: true,
+            email: true
+          },
+          policy: {
+            required: true
+          }
+        }, // сообщение
+        messages: {
+          userName: {
+            required: "Имя обязательно",
+            minlength: "Имя не короче двух букв",
+            maxlength: "Имя не больше 15 букв"
+          },
+          userPhone: {
+            required: "Телефон обязателен",
+            minlength: "Слишком короткий номер",
+          },
+          userEmail: {
+            required: "Обязательно укажите email",
+            email: "Введите в формате: name@domain.com"
+          },
+          policy: {
+            required: "Поле обязательно"
+          }
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(form).serialize(),
+            success: function (response) {
+              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+              $(form)[0].reset();
+              modal.removeClass('modal_visible');        
+            },
+            error: function (response) {
+              console.error('Ошибка запроса ' + response);              
+            }
+          });
+        }
+      });
+    })
+
+    // маска для телефона
+    $('[type=tel]').mask('+7(000) 000-00-00');
+
   });
 
   var scrollDown = $('.hero__scroll-down');
@@ -191,8 +204,6 @@ document.addEventListener("DOMContentLoaded", (event) =>{
   }else{
     scrollDown.addClass('active');
   };
-
-   
 
   $(window).scroll(function () {
     var topBtn = $('.to-top'),

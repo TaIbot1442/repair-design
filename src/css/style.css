@@ -1455,7 +1455,9 @@ img {
     max-width: 100%; }
     .footer__map .ymaps-2-1-76-map {
       max-height: 100%;
-      max-width: 100%; } }
+      max-width: 100%; }
+  .policy__label {
+    font-size: 1.18rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
