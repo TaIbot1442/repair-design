@@ -372,7 +372,7 @@ template {
     visibility: hidden;
     position: absolute;
     z-index: -1; }
-    .policy__checkbox:checked + .policy__label::before {
+    .policy__checkbox:checked ~ .policy__label::before {
       content: '';
       background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
   .policy__label {
@@ -591,7 +591,7 @@ img {
     align-items: center;
     justify-content: center;
     left: 0;
-    bottom: 0.3rem;
+    bottom: 0rem;
     min-width: 17.6rem;
     min-height: 6.92rem;
     background-color: #131313;
@@ -959,6 +959,10 @@ img {
   .footer__policy {
     flex-basis: 100%;
     margin-bottom: 3.5rem; }
+    .footer__policy label.invalid {
+      left: 0;
+      right: 0;
+      text-align: center; }
   .footer__button {
     margin: auto;
     padding: 0.79rem 4.286rem;
@@ -1058,21 +1062,16 @@ img {
     flex-direction: column; }
   .modal__input {
     margin-top: -5px; }
-    .modal__input:not(:last-child) {
-      margin-bottom: 1rem; }
     .modal__input-group {
       display: flex;
       flex-direction: column;
       margin-bottom: 3.3rem;
       position: relative; }
       .modal__input-group:nth-child(2) {
-        margin-bottom: 3.2rem; }
+        margin-bottom: 3.6rem; }
       .modal__input-group:nth-child(3) {
         margin-top: -6px;
-        margin-bottom: 0.8rem;
-        line-height: 25px; }
-      .modal__input-group label.invalid {
-        transform: translate(0px, 40%); }
+        margin-bottom: 1.1rem; }
   .modal__policy {
     margin-bottom: 2.65rem; }
   .modal__button {
@@ -1276,7 +1275,9 @@ img {
     .policy__label_center {
       justify-content: flex-start; }
   .control__policy #policy-error {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .footer__policy label.invalid {
+    text-align: left; } }
 
 @media screen and (max-width: 760px) {
   .row {
