@@ -83,6 +83,26 @@
             line-height: 158.48%
             margin-top: 2rem
             max-width: 290px
+    .control
+        position: relative
+        background: $dark
+        color: $light 
+        padding-bottom: 3.5rem
+        &__section-title
+            margin-top: 0
+        &__input-group
+            flex-basis: 100%
+            margin-bottom: 3rem
+        &__label
+            margin-bottom: 0
+        &__button
+            order: 2
+        &__policy            
+            order: 1
+            margin-left: 5.4rem
+            margin-bottom: 2rem
+            &-label
+                justify-content: start 
     .swiper
         &-slide
             &__heading
@@ -138,7 +158,7 @@
     .hero
         height: auto
         padding-top: 140px
-        min-height: 100vh
+        min-height: 68.6vh
         justify-content: flex-start
         .container
             margin: 0 auto
@@ -163,9 +183,50 @@
         &__heading
             font-size: 1.834rem
             line-height: 138.6%
+    .control
+        padding-bottom: 0
+        &__section-title
+            margin-top: -70.6px
+            margin-bottom: 3.315rem
+        &__video
+            min-height: 17.2rem
+            margin-bottom: 2.329rem
+        &__text
+            font-size: 14px
+            line-height: 169.8%
+            margin-bottom: 2.556rem
+            margin-right: -5px
+            margin-left: -5px
+            &::before
+                margin-bottom: 1.4rem
+        &__label
+            font-size: 15px
+            line-height: 20px
+            margin-bottom: -7px
+        &__input
+            font-size: 18px
+            line-height: 138.72%
+            &-group
+                margin-bottom: 4.7rem
+        &__policy
+            margin-top: -2.9rem
+            &-label
+                font-size: 16px
+                line-height: 22px
+        &__button
+            order: 2
+            margin-top: 3rem
+            width: 100%
+            padding: 1.4rem 4.786rem
+            max-width: 340px
+            margin-bottom: -2rem
+    .video
+        &__play
+            max-width: 5.3rem
     .section 
         padding: 5.7rem 0
     .types
+        padding-top: 5rem
         &__section-title
             margin-bottom: 3.3rem
         &__card
@@ -235,8 +296,64 @@
             width: 100%
             max-width: 340px
         &__right
-            margin-top: 2.728rem
-    
+            margin-top: 2.728rem    
+    .footer
+        padding-top: 0
+        background: #131313
+        &__wrap
+            padding: 2.7rem 1.5rem
+            margin-top: 0
+            margin-bottom: 1.1rem
+            &-mod
+                padding-left: 0
+        &__title
+            font-size: 1.66rem
+            margin-bottom: 4.315rem
+        &__input
+            font-size: 1.485rem
+            &-group
+                flex-basis: 100%
+                margin-bottom: 4.9rem
+                &_full-width
+                    margin-bottom: 0.8rem
+        &__policy
+            margin-bottom: 5.6rem
+        &__button
+            padding: 0.9rem 4.286rem
+            width: 100%
+            max-width: 360px
+        &>.container
+            display: flex
+            flex-direction: column
+        &__map
+            order: 1
+            min-height: 0
+            height: 256px
+            margin-bottom: 3.3rem
+            .ymaps-2-1-76-map
+                max-height: 100%
+        &__address
+            font-size: 18px
+            line-height: 25px
+            max-width: 320px
+            margin: 0 auto 21px
+            &-wrap
+                order: 2
+        &__links
+            margin-bottom: 38px
+        &__link
+            width: 40px
+            height: 40px
+            img
+                width: 20px
+        &__menu
+            display: none
+    .policy
+        &__label
+            font-size: 1.343rem
+            &_center
+                justify-content: flex-start
+        
 @media screen and ( max-height: 520px ) 
     .hero
         &__scroll-down
