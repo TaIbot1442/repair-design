@@ -36,10 +36,12 @@
     &::placeholder
       color: $light
 .policy
+  position: relative
   &__checkbox
     opacity: 0
     visibility: hidden
-    display: none
+    position: absolute
+    z-index: -1
     &:checked +
       .policy__label
         &::before
@@ -66,6 +68,9 @@
 label
   &.invalid
     color: $tomato
+    position: absolute
+    bottom: 0
+    transform: translate(0px, 100%)
 input
   &.invalid
     border-bottom: 1px solid $tomato

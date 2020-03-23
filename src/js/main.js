@@ -42,11 +42,17 @@ document.addEventListener("DOMContentLoaded", (event) =>{
           minlength: 2,
           maxlength: 15
         },
-        userPhone: "required",
+        userPhone: {
+          required: true,
+          minlength: 17
+        },
         // правило-обьект (блок)
         userEmail: {
           required: true,
           email: true
+        },
+        policy: {
+          required: true
         }
       }, // сообщение
       messages: {
@@ -55,10 +61,16 @@ document.addEventListener("DOMContentLoaded", (event) =>{
           minlength: "Имя не короче двух букв",
           maxlength: "Имя не больше 15 букв"
         },
-        userPhone: "Телефон обязателен",
+        userPhone: {
+          required: "Телефон обязателен",
+          minlength: "Слишком короткий номер",
+        },
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
+        },
+        policy: {
+          required: "Поле обязательно"
         }
       }
     });

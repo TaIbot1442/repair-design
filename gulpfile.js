@@ -2,6 +2,7 @@ const {src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+//const sourcemaps = require('gulp-sourcemaps');
  
 function bs() {
     serveSass();
@@ -18,10 +19,12 @@ function bs() {
 
 function serveSass() {
     return src('./src/sass/**/*.sass', './src/sass/**/*.scss')
+        //.pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({
             cascade: false
         }))
+        //.pipe(sourcemaps.write())
         .pipe(dest('./src/css'))
         .pipe(browserSync.stream())
 }
