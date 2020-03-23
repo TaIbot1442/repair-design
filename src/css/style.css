@@ -1165,7 +1165,8 @@ img {
       margin-left: 0; }
   .projects {
     background: #131313;
-    padding: 2.76rem 0; }
+    padding: 2.76rem 0;
+    margin-top: 0; }
     .projects__left, .projects__right {
       width: 100%;
       max-width: 340px; }
