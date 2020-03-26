@@ -48,6 +48,15 @@
         &__number
             &:hover
                 color: $light
+    .video
+        &__play
+            &:hover
+                transform: scale(1.1)
+    .to-top
+        &.active
+            &:hover
+                background: $primary
+                color: $dark
 @media screen and ( max-width: 991px ) 
     .nav
         display: none
@@ -387,3 +396,7 @@
     .hero
         &__scroll-down
             display: none
+    .modal
+        overflow: scroll
+        align-items: flex-start
+        padding: 50px 0

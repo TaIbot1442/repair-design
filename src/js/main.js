@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) =>{ 
+//document.addEventListener("DOMContentLoaded", (event) =>{ 
   // const modal = document.querySelector('.modal');
   // const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   // const closeBtn = document.querySelector('.modal__close');
@@ -28,57 +28,58 @@ document.addEventListener("DOMContentLoaded", (event) =>{
   //     modal.classList.remove('modal_visible');
   //   }
   // };  
-  new WOW().init(); 
-
-  // yandex map
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [47.244729, 39.723187],
-            zoom: 18
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Наш офис',
-            balloonContent: 'Вход со двора'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/marker.png',
-            // Размеры метки.
-            iconImageSize: [32, 32],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        });
-        //офф зум скрол
-        myMap.behaviors.disable('scrollZoom');
-        // привести свои размеры к размерам контейнера.
-        myMap.container.fitToViewport();
-        
-    myMap.geoObjects
-        .add(myPlacemark);
-  });
-});
+  
+//});
 
 
 
-  $(document).ready(function () {    
-    var modal = $('.modal'),
+  $(document).ready(function () {  
+    new WOW().init(); 
+
+    // yandex map
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [47.244729, 39.723187],
+              zoom: 18
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Наш офис',
+              balloonContent: 'Вход со двора'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/marker.png',
+              // Размеры метки.
+              iconImageSize: [32, 32],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          });
+          //офф зум скрол
+          myMap.behaviors.disable('scrollZoom');
+          // привести свои размеры к размерам контейнера.
+          myMap.container.fitToViewport();
+          
+      myMap.geoObjects
+          .add(myPlacemark);
+    });  
+    var modal = $('#callback'),
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
     
-    var pressEsc = ()=>{
+    var pressEsc = function (){
       if(modal.hasClass('modal_visible')){
-        $(document).on('keydown', (event)=>{
+        $(document).on('keydown', function(event){
           if(event.keyCode === 27){
             modal.removeClass('modal_visible');
           }
@@ -86,18 +87,20 @@ document.addEventListener("DOMContentLoaded", (event) =>{
       }
     };
 
-    modalBtn.click(()=> {
+    modalBtn.click(function () {
         modal.toggleClass('modal_visible');
         pressEsc();
     });
 
-    closeBtn.click(()=> {
-        modal.toggleClass('modal_visible');
+    closeBtn.click(function () {
+        $(this).closest(modal).toggleClass('modal_visible');
+        modal.find("form")[0].reset();
     }); 
     
-    modal.click((event)=> {
+    modal.click(function (event){
       if($(event.target).hasClass('modal_visible')){
         modal.removeClass('modal_visible');
+        modal.find("form")[0].reset();
       }
     });    
   
@@ -181,9 +184,22 @@ document.addEventListener("DOMContentLoaded", (event) =>{
             url: "send.php",
             data: $(form).serialize(),
             success: function (response) {
-              alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
+              //alert('Форма отправлена, мы свяжемся с Вами через 10 минут');
               $(form)[0].reset();
-              modal.removeClass('modal_visible');        
+              modal.removeClass('modal_visible');
+
+              $(".modal-thanks").addClass('modal_visible');              
+              $(".modal-thanks").click(function(event){
+                if($(event.target).hasClass('modal_visible')){
+                  $(".modal-thanks").removeClass('modal_visible');
+                }
+              });
+              $(".modal-thanks .modal__close").click(function () {
+                $(".modal-thanks").removeClass('modal_visible');
+              }); 
+              setTimeout(function(){
+                $(".modal-thanks").removeClass('modal_visible');
+              }, 5000);      
             },
             error: function (response) {
               console.error('Ошибка запроса ' + response);              
@@ -191,19 +207,42 @@ document.addEventListener("DOMContentLoaded", (event) =>{
           });
         }
       });
-    })
+      // маска для телефона
+      $('[type=tel]').mask('+7(000) 000-00-00');
+    });
 
-    // маска для телефона
-    $('[type=tel]').mask('+7(000) 000-00-00');
+    var scrollDown = $('.hero__scroll-down');
+    if($(window).scrollTop()>$(window).height()){
+      scrollDown.removeClass('active');
+    }else{
+      scrollDown.addClass('active');
+    };
 
+    var $page = $('html, body');
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+        return false;
+    });
+
+    var player;
+
+    $('.video__play').on("click", function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: '8awdQRP816c',
+        events: {
+          'onReady': videoPlay
+        }
+      });
+    });
   });
 
-  var scrollDown = $('.hero__scroll-down');
-  if($(window).scrollTop()>$(window).height()){
-    scrollDown.removeClass('active');
-  }else{
-    scrollDown.addClass('active');
-  };
+  function videoPlay(event){
+    event.target.playVideo();
+  }
 
   $(window).scroll(function () {
     var topBtn = $('.to-top'),
@@ -220,4 +259,4 @@ document.addEventListener("DOMContentLoaded", (event) =>{
     }else{
       scrollDown.addClass('active');
     };
-  })
+  });

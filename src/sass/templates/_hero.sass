@@ -50,7 +50,7 @@
     left: 0
     bottom: 0rem
     min-width: 17.6rem
-    min-height: 6.92rem
+    height: 6.92rem
     background-color: $dark
     text-transform: uppercase
     text-decoration: none
@@ -60,7 +60,7 @@
       animation-name: slideUp
       animation-duration: 0.5s
       animation-timing-function: ease-in
-      animation-delay: 3s
+      animation-delay: 1s
       animation-fill-mode: forwards
       opacity: 0
     &::after
@@ -85,12 +85,15 @@
     transform: rotate(90deg)
     line-height: 0.8
     font-size: 1rem
+    padding-right: 59px
     &::after
       content: ''
       width: 50px
       height: 1px
       background-color: $primary
-      margin-left: 9px
+      margin-left: 9px;
+      display: block;
+      margin-right: -59px
     &:hover
       color: $light
     &:hover:after
